@@ -1,5 +1,6 @@
 import 'package:e_commerce/screens/checkout.dart';
 import 'package:e_commerce/screens/homepage.dart';
+import 'package:e_commerce/screens/homescreen.dart';
 import 'package:e_commerce/widgets/mybutton.dart';
 import 'package:e_commerce/widgets/notification_button.dart';
 
@@ -99,19 +100,19 @@ class _DetailScreenState extends State<DetailScreen> {
   void getSize() {
     if (sizeIndex == 0) {
       setState(() {
-        size = "S";
+        size = "Single";
       });
     } else if (sizeIndex == 1) {
       setState(() {
-        size = "M";
+        size = "Duo";
       });
     } else if (sizeIndex == 2) {
       setState(() {
-        size = "L";
+        size = "Family";
       });
     } else if (sizeIndex == 3) {
       setState(() {
-        size = "XL";
+        size = "Group";
       });
     }
   }
@@ -316,7 +317,7 @@ class _DetailScreenState extends State<DetailScreen> {
       onWillPop: () async {
         return Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-            builder: (ctx) => HomePage(),
+            builder: (ctx) => HomeScreen(),
           ),
         );
       },
@@ -334,7 +335,7 @@ class _DetailScreenState extends State<DetailScreen> {
             onPressed: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (ctx) => HomePage(),
+                  builder: (ctx) => HomeScreen(),
                 ),
               );
             },

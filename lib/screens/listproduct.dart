@@ -4,6 +4,7 @@ import 'package:e_commerce/provider/product_provider.dart';
 import 'package:e_commerce/screens/detailscreen.dart';
 
 import 'package:e_commerce/screens/homepage.dart';
+import 'package:e_commerce/screens/homescreen.dart';
 import 'package:e_commerce/screens/search_category.dart';
 import 'package:e_commerce/screens/search_product.dart';
 import 'package:e_commerce/widgets/notification_button.dart';
@@ -121,7 +122,7 @@ class ListProduct extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (ctx) => HomePage(),
+                  builder: (ctx) => HomeScreen(),
                 ),
               );
             }),

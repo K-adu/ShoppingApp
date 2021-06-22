@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/build/app/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
-        "source": "/home/kadu/.gradle/caches/transforms-2/files-2.1/b608c3d8537f54a7ed8ad86b3bfe3664/core-1.1.0/res/drawable/notification_bg_low.xml"
-    },
-    {
         "merged": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/build/app/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_light.xml.flat",
         "source": "/home/kadu/.gradle/caches/transforms-2/files-2.1/fe53dd02fea6f00fc0146f74a725f819/play-services-base-17.1.0/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/build/app/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
+        "source": "/home/kadu/.gradle/caches/transforms-2/files-2.1/b608c3d8537f54a7ed8ad86b3bfe3664/core-1.1.0/res/drawable/notification_bg_low.xml"
     },
     {
         "merged": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -16,12 +16,12 @@
         "source": "/home/kadu/.gradle/caches/transforms-2/files-2.1/fe53dd02fea6f00fc0146f74a725f819/play-services-base-17.1.0/res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
         "source": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/android/app/src/main/res/drawable/launch_background.xml"
+    },
+    {
+        "merged": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "/home/kadu/Desktop/E-Commerce-app-In-Flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",

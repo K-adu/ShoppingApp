@@ -4,6 +4,7 @@ import 'package:e_commerce/screens/homepage.dart';
 import 'package:e_commerce/screens/homescreen.dart';
 import 'package:e_commerce/screens/login.dart';
 import 'package:e_commerce/screens/welcomescreen.dart';
+import 'package:e_commerce/screens/blog.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';

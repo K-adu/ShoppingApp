@@ -1,4 +1,6 @@
+import 'package:e_commerce/screens/blog.dart';
 import 'package:e_commerce/screens/homepage.dart';
+import 'package:e_commerce/screens/maps.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,15 +13,15 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final tabs = [
     Center(child: HomePage()),
-    Center(child: Text('Maps')),
-    Center(child: Text('Blogs')),
+    Center(child: MyApp()),
+    Center(child: Blog()),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.deepPurple[400],
         currentIndex: _currentIndex,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

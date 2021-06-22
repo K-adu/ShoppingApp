@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
 import 'package:provider/provider.dart';
@@ -39,7 +38,7 @@ class _NotificationButtonState extends State<NotificationButton> {
               child: ListBody(
                 children: [
                   Text(productProvider.notificationList.isNotEmpty
-                      ? "Your Product On Way"
+                      ? "Your booking is listed we will email you as soon as booking is successful"
                       : "No Notification At Yet"),
                 ],
               ),

@@ -90,7 +90,7 @@ class _CheckOutSingleProductState extends State<CheckOutSingleProduct> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Text("Quentity"),
+          Text("Package"),
           Padding(
             padding: const EdgeInsets.only(right: 5),
             child: Text(
