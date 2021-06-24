@@ -13,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final tabs = [
     Center(child: HomePage()),
-    Center(child: MyApp()),
+    Center(child: MapApp()),
     Center(child: Blog()),
   ];
   @override

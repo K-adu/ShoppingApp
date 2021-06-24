@@ -1,133 +1,151 @@
-// import 'dart:async';
+// // import 'dart:async';
 
+// // import 'package:flutter/material.dart';
+// // import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+// // // void main() => runApp(MyApp());
+
+// // // class MyApp extends StatelessWidget {
+// // //   @override
+// // //   Widget build(BuildContext context) {
+// // //     return MaterialApp(
+// // //       title: 'Flutter Google Maps Demo',
+// // //       home: MapSample(),
+// // //     );
+// // //   }
+// // // }
+
+// // class MapSample extends StatefulWidget {
+// //   @override
+// //   State<MapSample> createState() => MapSampleState();
+// // }
+
+// // class MapSampleState extends State<MapSample> {
+// //   Completer<GoogleMapController> _controller = Completer();
+
+// //   static final CameraPosition _kGooglePlex = CameraPosition(
+// //     target: LatLng(37.42796133580664, -122.085749655962),
+// //     zoom: 14.4746,
+// //   );
+
+// //   static final CameraPosition _kLake = CameraPosition(
+// //       bearing: 192.8334901395799,
+// //       target: LatLng(37.43296265331129, -122.08832357078792),
+// //       tilt: 59.440717697143555,
+// //       zoom: 19.151926040649414);
+
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return new Scaffold(
+// //       body: GoogleMap(
+// //         mapType: MapType.hybrid,
+// //         initialCameraPosition: _kGooglePlex,
+// //         onMapCreated: (GoogleMapController controller) {
+// //           _controller.complete(controller);
+// //         },
+// //       ),
+// //       floatingActionButton: FloatingActionButton.extended(
+// //         onPressed: _goToTheLake,
+// //         label: Text('To the lake!'),
+// //         icon: Icon(Icons.directions_boat),
+// //       ),
+// //     );
+// //   }
+
+// //   Future<void> _goToTheLake() async {
+// //     final GoogleMapController controller = await _controller.future;
+// //     controller.animateCamera(CameraUpdate.newCameraPosition(_kLake));
+// //   }
+// // }
+
+// import 'package:e_commerce/screens/homescreen.dart';
+// import 'package:e_commerce/widgets/notification_button.dart';
 // import 'package:flutter/material.dart';
 // import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 // // void main() => runApp(MyApp());
 
-// // class MyApp extends StatelessWidget {
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return MaterialApp(
-// //       title: 'Flutter Google Maps Demo',
-// //       home: MapSample(),
-// //     );
-// //   }
-// // }
-
-// class MapSample extends StatefulWidget {
+// class MyApp extends StatefulWidget {
 //   @override
-//   State<MapSample> createState() => MapSampleState();
+//   _MyAppState createState() => _MyAppState();
 // }
 
-// class MapSampleState extends State<MapSample> {
-//   Completer<GoogleMapController> _controller = Completer();
+// class _MyAppState extends State<MyApp> {
+//   GoogleMapController mapController;
 
-//   static final CameraPosition _kGooglePlex = CameraPosition(
-//     target: LatLng(37.42796133580664, -122.085749655962),
-//     zoom: 14.4746,
-//   );
+//   final LatLng _center = const LatLng(45.521563, -122.677433);
 
-//   static final CameraPosition _kLake = CameraPosition(
-//       bearing: 192.8334901395799,
-//       target: LatLng(37.43296265331129, -122.08832357078792),
-//       tilt: 59.440717697143555,
-//       zoom: 19.151926040649414);
+//   void _onMapCreated(GoogleMapController controller) {
+//     mapController = controller;
+//   }
+
+//   Widget _buildSearchBar(context) {
+//     return true
+//         ? IconButton(
+//             icon: Icon(
+//               Icons.search,
+//               color: Colors.black,
+//             ),
+//             onPressed: () {},
+//           )
+//         : IconButton(
+//             icon: Icon(
+//               Icons.search,
+//               color: Colors.black,
+//             ),
+//             onPressed: () {},
+//           );
+//   }
 
 //   @override
 //   Widget build(BuildContext context) {
-//     return new Scaffold(
-//       body: GoogleMap(
-//         mapType: MapType.hybrid,
-//         initialCameraPosition: _kGooglePlex,
-//         onMapCreated: (GoogleMapController controller) {
-//           _controller.complete(controller);
-//         },
-//       ),
-//       floatingActionButton: FloatingActionButton.extended(
-//         onPressed: _goToTheLake,
-//         label: Text('To the lake!'),
-//         icon: Icon(Icons.directions_boat),
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           backgroundColor: Colors.transparent,
+//           elevation: 0.0,
+//           leading: IconButton(
+//               icon: Icon(
+//                 Icons.arrow_back,
+//                 color: Colors.black,
+//               ),
+//               onPressed: () {
+//                 Navigator.of(context).pushReplacement(
+//                   MaterialPageRoute(
+//                     builder: (ctx) => HomeScreen(),
+//                   ),
+//                 );
+//               }),
+//           actions: <Widget>[
+//             _buildSearchBar(context),
+//             NotificationButton(),
+//           ],
+//         ),
+//         body: GoogleMap(
+//           onMapCreated: _onMapCreated,
+//           initialCameraPosition: CameraPosition(
+//             target: _center,
+//             zoom: 11.0,
+//           ),
+//         ),
 //       ),
 //     );
 //   }
-
-//   Future<void> _goToTheLake() async {
-//     final GoogleMapController controller = await _controller.future;
-//     controller.animateCamera(CameraUpdate.newCameraPosition(_kLake));
-//   }
 // }
 
-import 'package:e_commerce/screens/homescreen.dart';
-import 'package:e_commerce/widgets/notification_button.dart';
+import 'package:e_commerce/src/blocs/application_bloc.dart';
+import 'package:e_commerce/src/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:provider/provider.dart';
 
-// void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  GoogleMapController mapController;
-
-  final LatLng _center = const LatLng(45.521563, -122.677433);
-
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
-  }
-
-  Widget _buildSearchBar(context) {
-    return true
-        ? IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.black,
-            ),
-            onPressed: () {},
-          )
-        : IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.black,
-            ),
-            onPressed: () {},
-          );
-  }
-
+class MapApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0.0,
-          leading: IconButton(
-              icon: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-              ),
-              onPressed: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (ctx) => HomeScreen(),
-                  ),
-                );
-              }),
-          actions: <Widget>[
-            _buildSearchBar(context),
-            NotificationButton(),
-          ],
-        ),
-        body: GoogleMap(
-          onMapCreated: _onMapCreated,
-          initialCameraPosition: CameraPosition(
-            target: _center,
-            zoom: 11.0,
-          ),
-        ),
+    return ChangeNotifierProvider(
+      create: (context) => ApplicationBloc(),
+      child: MaterialApp(
+        home: MapScreen(),
       ),
     );
   }
