@@ -317,7 +317,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                "Categorie",
+                "Category",
                 style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
               ),
             ],

@@ -121,10 +121,10 @@ class _SignUpState extends State<SignUp> {
           content: Text("Password  Is Too Short"),
         ),
       );
-    } else if (phoneNumber.text.length < 11 || phoneNumber.text.length > 11) {
+    } else if (phoneNumber.text.length < 10 || phoneNumber.text.length > 10) {
       _scaffoldKey.currentState.showSnackBar(
         SnackBar(
-          content: Text("Phone Number Must Be 11 "),
+          content: Text("Phone Number Must Be 10 "),
         ),
       );
     } else if (address.text.isEmpty) {
@@ -258,7 +258,6 @@ class _SignUpState extends State<SignUp> {
         children: [
           Container(
             height: 200,
-         
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

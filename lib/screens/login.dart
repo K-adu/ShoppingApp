@@ -155,7 +155,7 @@ class _LoginState extends State<Login> {
                 ),
                 ChangeScreen(
                     name: "SignUp",
-                    whichAccount: "I Have Not Account!",
+                    whichAccount: "Don't have an account?",
                     onTap: () {
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
